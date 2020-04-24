@@ -1,0 +1,108 @@
+@import './colors';
+@import './fonts';
+@import './icon/style';
+
+* {
+  box-sizing: border-box;
+  font-family: "oswald", sans-serif;
+}
+
+html, body, #root {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: $semi-bold-weight;
+  color: $purple-bg;
+}
+
+div, span, p, button, a, label, input, textarea {
+  font-weight: $normal-weight;
+  color: $white;
+}
+
+span {
+  display: inline-block;
+}
+
+button, input {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, button, a, label, input {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.container {
+  margin: auto;
+  padding: 0 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.3);
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 1119px) {
+  .layout, div, span, p, button, a, label, input, textarea {
+    font-size: 14px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .container {
+    min-width: 320px;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .layout, div, span, p, button, a, label, input, textarea {
+    font-size: 16px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+

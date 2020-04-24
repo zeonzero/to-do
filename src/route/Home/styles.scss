@@ -1,0 +1,130 @@
+@import '../../style/colors';
+
+.home-page {
+  .to-do-header-observer {
+    position: relative;
+    height: 62px;
+    margin-bottom: 20px;
+  }
+
+  .to-do-header-container {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    background-color: rgba(0,0,0, 0.3);
+    border-radius: 32px;
+
+    &.fixed {
+      position: fixed;
+      max-width: 1180px;
+      top: 8px;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .to-do-filter-container {
+      display: flex;
+
+      .to-do-filter {
+        display: flex;
+        align-items: center;
+        background-color: $black-bg;
+        border-radius: 20px;
+        padding: 10px 24px;
+
+        .filter-title {
+          margin-right: 24px;
+          font-weight: 600;
+        }
+
+        .filter-item {
+          cursor: pointer;
+          user-select: none;
+
+          +.filter-item {
+            margin-left: 20px;
+          }
+
+          .filter-type {
+            display: inline-block;
+            margin-right: 4px;
+          }
+
+          .filter-icon {
+            display: inline-block;
+            transform: rotate(90deg);
+
+            &.asc {
+              transform: rotate(270deg);
+            }
+
+            i {
+              display: block;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .reset-filter {
+        margin-left: 16px;
+      }
+    }
+
+
+    .to-do-add {
+      display: flex;
+      align-items: center;
+      border: 1px solid $black-bg;
+      background-color: $black-bg;
+      padding: 10px;
+      margin-left: 24px;
+      border-radius: 20px;
+
+      .add-icon-container {
+        transition: all 300ms ease;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: $purple-bg;
+        padding: 6px;
+        margin-right: 8px;
+
+        i {
+          display: block;
+          font-size: 12px;
+          line-height: 12px;
+          color: $white;
+        }
+      }
+
+      .add-text {
+        display: inline-block;
+      }
+
+      &:hover {
+        background-color: $purple-bg;
+
+        .add-icon-container {
+          background-color: $black-bg;
+        }
+      }
+    }
+  }
+
+  .to-do-list {
+    .to-do-item {
+      +.to-do-item {
+        margin-top: 20px;
+      }
+
+      .footer-btn {
+        min-width: 72px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$normal-weight:   400;
+$semi-bold-weight: 600;
+
+@font-face {
+  font-family: "oswald";
+  src: local('oswald-regular') url('./fonts/Oswald-Regular.ttf') format('ttf');
+  font-weight: $normal-weight;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oswald";
+  src: local('oswald-semi-bold') url('./fonts/Oswald-Regular.ttf') format('ttf');
+  font-weight: $semi-bold-weight;
+  font-style: normal;
+}

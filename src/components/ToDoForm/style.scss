@@ -1,0 +1,141 @@
+@import '../../style/colors';
+
+.to-do-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  z-index: 2;
+
+  .card-component {
+    border-radius: 32px;
+    padding: 12px 24px 32px;
+    background-color: $black-bg;
+
+    .form-header {
+      padding-bottom: 8px;
+      background-image: linear-gradient(to right, rgba(255,255, 255,1), rgba(255,255, 255,0));
+      background-repeat: no-repeat;
+      background-size: 100% 1px;
+      background-position: bottom;
+    }
+
+    .form-body {
+      padding: 16px 0;
+
+      .input-container {
+        +.input-container {
+          margin-top: 20px;
+        }
+
+        label {
+          display: block;
+          font-size: 16px;
+          cursor: pointer;
+          margin-bottom: 8px;
+        }
+
+        .textarea-container {
+          position: relative;
+
+          textarea {
+            width: 100%;
+            height: 125px;
+            padding: 12px;
+            resize: none;
+          }
+
+          .description-note {
+            display: flex;
+            justify-content: space-between;
+
+            .form-error-msg {
+              padding-right: 8px;
+            }
+
+            .character-counter {
+              display: block;
+              text-align: right;
+              flex: 1 1;
+              margin-top: 8px;
+              right: 12px;
+              bottom: 12px;
+            }
+          }
+        }
+
+        .form-error-msg {
+          color: $danger-btn;
+          margin-top: 8px;
+        }
+
+        input, textarea {
+          display: block;
+          width: 100%;
+          border-radius: 24px;
+          border: none;
+          background-color: $white;
+          color: $black;
+          height: 32px;
+          padding: 0 12px;
+          outline: none;
+
+          &:focus {
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, .5);
+          }
+
+          &::placeholder {
+            color: $black;
+          }
+        }
+
+        .react-datepicker {
+          border: 1px solid $grey-bg;
+          background-color: $black-bg;
+
+          .react-datepicker__header, .react-datepicker__time {
+            background-color: $black-bg;
+          }
+
+          .react-datepicker__triangle {
+            border-bottom-color: $black-bg;
+          }
+
+          .react-datepicker__navigation--previous {
+            border-right-color: $white;
+          }
+
+          .react-datepicker__navigation--next {
+            border-left-color: $white;
+          }
+
+          .react-datepicker__day--selected {
+            background-color: $purple-bg;
+          }
+
+          .react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-list-item {
+            color: $white;
+
+
+          }
+
+          .react-datepicker__day, .react-datepicker__time-list-item  {
+            &:hover {
+              background-color: $purple-bg !important;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-btn {
+      min-width: 100px;
+    }
+  }
+}

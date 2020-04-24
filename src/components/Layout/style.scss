@@ -1,0 +1,18 @@
+@import '../../style/colors';
+
+.layout {
+  header {
+    background-color: $black-bg;
+
+    h1 {
+      padding: 12px 0;
+    }
+  }
+
+  main {
+    background-color: $purple-bg;
+    padding: 24px 0;
+    min-height: calc(100vh - 72px);
+    height: calc(100% - 72px);
+  }
+}

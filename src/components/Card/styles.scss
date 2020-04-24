@@ -1,0 +1,64 @@
+@import '../../style/colors';
+
+.card-component {
+  border-radius: 12px;
+  padding: 12px 10px;
+  background-color: $black-bg;
+
+  .card-header {
+    transition: min-height 300ms ease;
+    position: relative;
+    padding-bottom: 8px;
+    margin-right: 10%;
+    background-image: linear-gradient(to right, rgba(255,255, 255,1), rgba(255,255, 255,0));
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: bottom;
+    min-height: 24px;
+
+    &.with-reminder {
+      min-height: 48px;
+    }
+
+    .card-date-time {
+      position: absolute;
+      right: -10%;
+      top: 0;
+
+      &.reminder {
+        bottom: 0;
+        top: unset;
+        animation: reminder-keyframe 1.5s infinite;
+      }
+
+      @keyframes reminder-keyframe {
+        0% {color: $danger-btn;}
+        50% {color: $danger-btn-hover;}
+        100% {color: $danger-btn;}
+      }
+    }
+  }
+
+  .card-body {
+    padding: 12px 0;
+
+    p {
+      word-break: break-word;
+    }
+  }
+
+  .card-footer {
+    padding-top: 12px;
+    border-top: 1px solid $white;
+
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+
+      .btn-component + .btn-component {
+        display: inline-block;
+        margin-left: 16px;
+      }
+    }
+  }
+}
